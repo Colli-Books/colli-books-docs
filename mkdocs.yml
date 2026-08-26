@@ -1,0 +1,106 @@
+site_name: Colli Books — Documentação do Produto
+site_description: Documentação do produto Colli Books — plataforma de consulta ao acervo por disciplina, voltada a professores.
+site_url: https://colli-books-docs.example.com
+repo_url: https://github.com/colli-books/colli-books-docs
+repo_name: colli-books-docs
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/book-open-variant
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: pt
+
+nav:
+  - Início: index.md
+  - Produto:
+      - Visão do produto: produto/visao.md
+      - Personas: produto/personas.md
+      - Fora do escopo: produto/escopo.md
+  - Backlog:
+      - backlog/index.md
+      - Épico 1 — Acesso e Contas: backlog/epico-1-acesso.md
+      - Épico 2 — Busca do Acervo: backlog/epico-2-busca.md
+      - Épico 3 — Material Pedagógico: backlog/epico-3-material.md
+      - Épico 4 — Gestão do Acervo: backlog/epico-4-gestao.md
+      - Resumo do backlog: backlog/resumo.md
+  - Cliente:
+      - Notas da reunião: cliente/notas.md
+      - Pontos a confirmar: cliente/pontos-a-confirmar.md
+  - Sobre: sobre.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/colli-books/colli-books-docs
+  status:
+    new: Novo
+    deprecated: Descontinuado
+
+copyright: Copyright &copy; 2026 Colli Books Editora — Projeto acadêmico TPPE/UnB
