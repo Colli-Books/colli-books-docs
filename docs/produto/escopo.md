@@ -6,6 +6,7 @@ A lista abaixo delimita explicitamente o que **não** será entregue no MVP. Man
 - **Venda, carrinho, checkout, pagamento e frete** — permanecem na loja oficial existente.
 - **Área de cliente final**, orçamento institucional e atendimento a compras públicas.
 - **Conteúdo institucional**: blog, notícias, mídia, videonovelas e Espaço do Autor.
+- **Material pedagógico** (planos de aula, guias de leitura, atividades complementares) — não faz parte desta versão.
 - **Importação em lote** do acervo e extração automática de dados a partir do catálogo em PDF ou do site WordPress atual.
 - **Integração ou sincronização** com o site WordPress e com a loja oficial.
 - **Relatórios e indicadores** de uso.

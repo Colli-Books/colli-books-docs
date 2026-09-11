@@ -1,6 +1,6 @@
 # Colli Books
 
-Bem-vindo à documentação do produto **Colli Books** — a plataforma de consulta ao acervo por disciplina, voltada a professores.
+Bem-vindo à documentação do produto **Colli Books** — a plataforma de consulta ao acervo por tema e escolaridade, voltada a professores.
 
 !!! info "Sobre este projeto"
     Documentação viva do projeto desenvolvido na disciplina de **TPPE** (Técnicas de Programação para Engenharia) da Universidade de Brasília, em parceria com a **Colli Books Editora**.
@@ -9,14 +9,14 @@ Bem-vindo à documentação do produto **Colli Books** — a plataforma de consu
 
 ## Resumo do produto
 
-O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo servem à disciplina que leciona.** A editora cadastra o professor, ele recebe um convite, define sua senha, busca por disciplina (ex.: Matemática) e encontra as obras daquela área com o material pedagógico correspondente.
+O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo contém o tema que procura.** A editora cadastra o professor a partir de um e-mail, ele recebe um convite, define sua senha, busca obras pelo nome, filtra por tema e escolaridade, e encontra as obras daquela área — com um link direto para compra na loja oficial.
 
 ### Perfis de usuário
 
 | Perfil | Responsabilidade |
 | --- | --- |
-| **Professor** | Consome o acervo. Busca, consulta e baixa material. |
-| **Administrador** | Alimenta o acervo e controla quem tem acesso. |
+| **Professor** | Consome o acervo. Busca, filtra, consulta, seleciona e salva obras. |
+| **Administrador** | Alimenta o acervo, cria temas e escolaridades, vincula-os aos livros e controla quem tem acesso. |
 
 Não há área de cliente final, carrinho, orçamento ou venda dentro do sistema. A venda continua na loja oficial existente.
 
@@ -36,9 +36,9 @@ Não há área de cliente final, carrinho, orçamento ou venda dentro do sistema
 
 | Prioridade | Quantidade | Pontos |
 | --- | --- | --- |
-| `MUST` | 14 | 54 |
-| `SHOULD` | 4 | 12 |
-| **Total** | **18** | **66** |
+| `MUST` | 15 | 54 |
+| `SHOULD` | 3 | 7 |
+| **Total** | **18** | **61** |
 
 **Prioridade:** `MUST` = essencial ao MVP · `SHOULD` = importante, entra se houver folga.
 **Estimativa:** story points (Fibonacci).

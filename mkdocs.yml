@@ -1,5 +1,5 @@
 site_name: Colli Books — Documentação do Produto
-site_description: Documentação do produto Colli Books — plataforma de consulta ao acervo por disciplina, voltada a professores.
+site_description: Documentação do produto Colli Books — plataforma de consulta ao acervo por tema e escolaridade, voltada a professores.
 site_url: https://colli-books-docs.example.com
 repo_url: https://github.com/colli-books/colli-books-docs
 repo_name: colli-books-docs
@@ -86,9 +86,9 @@ nav:
   - Backlog:
       - backlog/index.md
       - Épico 1 — Acesso e Contas: backlog/epico-1-acesso.md
-      - Épico 2 — Busca do Acervo: backlog/epico-2-busca.md
-      - Épico 3 — Material Pedagógico: backlog/epico-3-material.md
-      - Épico 4 — Gestão do Acervo: backlog/epico-4-gestao.md
+      - Épico 2 — Busca e Seleção do Acervo: backlog/epico-2-busca.md
+      - Épico 3 — Gestão do Acervo: backlog/epico-3-gestao.md
+      - Épico 4 — Navegação e Conteúdo Institucional: backlog/epico-4-navegacao.md
       - Resumo do backlog: backlog/resumo.md
   - Cliente:
       - Notas da reunião: cliente/notas.md

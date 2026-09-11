@@ -1,85 +1,79 @@
-# Épico 2 — Busca do Acervo por Disciplina
+# Épico 2 — Busca e Seleção do Acervo
 
-Núcleo funcional do produto: permitir que o professor encontre obras pela disciplina que leciona, com refinamento por etapa e por texto.
+Núcleo funcional do produto: permitir que o professor encontre obras pelo nome, filtre por tema e escolaridade, veja detalhes, vincule-se aos temas que leciona e salve uma seleção pessoal.
 
 ---
 
-## US06 — Busca por disciplina `MUST` · 5 pts
+## US07 — Busca de obras por nome `MUST` · 3 pts
 
-**Como** Paulo, **posso** selecionar uma disciplina e ver todas as obras vinculadas a ela, **para que** eu descubra quais livros do acervo servem à área que leciono.
+**Como** Paulo, **posso** buscar obras digitando o nome em um campo de busca, **para que** eu localize um livro específico no acervo.
 
 **Critérios de aceitação**
 
-- DADO que estou logado, QUANDO acesso a busca, ENTÃO vejo a lista de disciplinas cadastradas pela editora.
-- QUANDO seleciono uma disciplina (ex.: Matemática), ENTÃO vejo em grade as obras vinculadas a ela, com capa, título, autor e etapa de ensino.
-- QUANDO uma obra está vinculada a mais de uma disciplina, ENTÃO ela aparece na busca de todas elas.
-- QUANDO a disciplina não possui obras vinculadas, ENTÃO vejo mensagem indicando ausência de resultados.
+- DADO que estou logado, QUANDO digito um termo no campo de busca e confirmo, ENTÃO vejo as obras cujo título contenha o termo, ignorando acentuação e maiúsculas/minúsculas.
+- QUANDO não há resultados, ENTÃO vejo mensagem de ausência de resultados.
 - A listagem é paginada e o layout se adapta a telas de celular.
 
 ---
 
-## US07 — Filtro por etapa de ensino `MUST` · 3 pts
+## US08 — Filtro por tema e escolaridade `MUST` · 5 pts
 
-**Como** Paulo, **posso** refinar o resultado pela etapa de ensino, **para que** eu veja apenas obras adequadas à faixa etária da minha turma.
-
-**Critérios de aceitação**
-
-- DADO que estou vendo o resultado de uma disciplina, QUANDO seleciono uma etapa (Educação Infantil, Fundamental I, Fundamental II, Ensino Médio), ENTÃO a lista exibe apenas as obras daquela etapa.
-- QUANDO combino disciplina e etapa, ENTÃO ambos os filtros são aplicados simultaneamente.
-- QUANDO limpo os filtros, ENTÃO volto ao resultado completo da disciplina.
-
----
-
-## US08 — Busca por texto `MUST` · 3 pts
-
-**Como** Paulo, **posso** buscar obras digitando título, autor ou tema, **para que** eu localize um livro específico sem navegar pelas disciplinas.
+**Como** Paulo, **posso** filtrar o resultado da busca por tema e escolaridade, **para que** eu veja apenas as obras adequadas à área que leciono e à faixa etária da minha turma.
 
 **Critérios de aceitação**
 
-- QUANDO digito um termo e confirmo, ENTÃO vejo as obras cujo título, autor ou tema contenham o termo, ignorando acentuação e maiúsculas/minúsculas.
-- QUANDO não há resultados, ENTÃO vejo mensagem de ausência de resultados e um atalho para a busca por disciplina.
+- DADO que estou vendo o resultado de uma busca, QUANDO seleciono um tema, ENTÃO a lista exibe apenas as obras daquele tema.
+- QUANDO seleciono uma escolaridade (Educação Infantil, Fundamental I, Fundamental II, Ensino Médio), ENTÃO a lista exibe apenas as obras daquela escolaridade.
+- QUANDO combino tema e escolaridade, ENTÃO ambos os filtros são aplicados simultaneamente.
+- QUANDO uma obra está vinculada a mais de um tema, ENTÃO ela aparece na busca de todos eles.
+- QUANDO limpo os filtros, ENTÃO volto ao resultado completo da busca.
 
 ---
 
 ## US09 — Detalhe da obra `MUST` · 5 pts
 
-**Como** Paulo, **posso** abrir a página de uma obra e ver sinopse, ficha técnica, disciplinas atendidas e etapa de ensino, **para que** eu avalie se o livro atende ao meu planejamento.
+**Como** Paulo, **posso** abrir a página de uma obra e ver seus detalhes, **para que** eu avalie se o livro atende ao meu planejamento.
 
 **Critérios de aceitação**
 
-- DADO que clico em uma obra, ENTÃO vejo capa, título, autor, sinopse, ISBN, número de páginas, etapa de ensino e as disciplinas vinculadas.
-- QUANDO clico em uma das disciplinas exibidas, ENTÃO sou levado à busca daquela disciplina.
-- ENTÃO vejo a seção de material pedagógico da obra ([US12](epico-3-material.md#us12-materiais-da-obra-must-3-pts)).
-- ENTÃO vejo um link para a loja oficial, aberto em nova aba.
-
-??? question "Dúvida levantada com o cliente"
-    Revisar critérios de aceitação. Ver [Notas da reunião](../cliente/notas.md#epico-2-busca-do-acervo-por-disciplina).
+- DADO que clico em uma obra, ENTÃO vejo capa, título, autor, sinopse, ISBN, número de páginas, escolaridade e os temas vinculados.
+- QUANDO clico em um dos temas exibidos, ENTÃO sou levado à busca filtrada daquele tema.
+- ENTÃO vejo um botão "Comprar livro" que direciona para a página de compra na loja oficial, aberto em nova aba.
 
 ---
 
-## US10 — Minhas disciplinas `SHOULD` · 3 pts
+## US10 — Informações pessoais do professor `SHOULD` · 2 pts
 
-**Como** Paulo, **posso** ajustar no meu perfil as disciplinas que leciono, **para que** o sistema me apresente as obras da minha área ao entrar.
+**Como** Paulo, **posso** acessar uma tela de informações pessoais para ver meu e-mail e preencher meu nome e a escola associada, **para que** meu perfil esteja completo no sistema.
 
 **Critérios de aceitação**
 
-- DADO que estou no meu perfil, ENTÃO vejo as disciplinas informadas pela editora no meu cadastro e posso ajustá-las.
-- QUANDO salvo a alteração, ENTÃO a tela inicial passa a exibir obras dessas disciplinas.
-
-??? question "Dúvida levantada com o cliente"
-    Confirmar se as disciplinas são pré-cadastradas antes ou pelo professor e podem ser alteradas. Ver [Notas da reunião](../cliente/notas.md#epico-2-busca-do-acervo-por-disciplina).
+- DADO que estou logado como professor, QUANDO acesso "Minhas informações", ENTÃO vejo meu e-mail (preenchido pela editora no cadastro) em modo somente leitura.
+- ENTÃO vejo campos editáveis para nome e escola associada.
+- QUANDO preencho os campos e salvo, ENTÃO as informações são persistidas e exibidas no cabeçalho e no perfil.
+- QUANDO o nome não foi preenchido, ENTÃO o cabeçalho exibe o e-mail como identificação provisória.
+- ENTÃO vejo um botão "Sair" que encerra a sessão e me leva à tela de login.
 
 ---
 
-## US11 — Minha Seleção `SHOULD` · 3 pts
+## US11 — Vinculação do professor a temas e escolaridades `MUST` · 3 pts
 
-**Como** Paulo, **posso** salvar obras em uma lista pessoal, **para que** eu retome depois as que pretendo indicar à coordenação.
+**Como** Paulo, **posso** vincular-me aos temas e escolaridades que leciono, **para que** o sistema me apresente as obras da minha área.
 
 **Critérios de aceitação**
 
-- QUANDO clico em "Salvar" numa obra, ENTÃO ela passa a constar em "Minha Seleção" e o botão indica o estado salvo.
+- DADO que estou no meu perfil, ENTÃO vejo a lista de temas e escolaridades cadastrados pela editora e posso selecionar os que leciono.
+- QUANDO salvo a alteração, ENTÃO o sistema passa a priorizar as obras dos meus temas e escolaridades.
+- A vinculação persiste entre sessões e pode ser alterada a qualquer momento.
+
+---
+
+## US12 — Seleção e salvamento de obras `MUST` · 3 pts
+
+**Como** Paulo, **posso** selecionar obras quando estiverem listadas e salvá-las, **para que** eu retome depois.
+
+**Critérios de aceitação**
+
+- QUANDO clico em "Salvar" numa obra listada, ENTÃO ela passa a constar em "Minha Seleção" e o botão indica o estado salvo.
 - QUANDO acesso "Minha Seleção", ENTÃO vejo as obras salvas e posso remover qualquer uma.
 - A seleção persiste entre sessões.
-
-??? tip "Descartável"
-    Facilmente descartável se o escopo ficar grande. Ver [Notas da reunião](../cliente/notas.md#epico-2-busca-do-acervo-por-disciplina).
