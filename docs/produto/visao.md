@@ -37,13 +37,5 @@ flowchart LR
 Esse desenho existe por dois motivos:
 
 1. **Nenhuma senha trafega por mensagem** e fica registrada para sempre numa conversa de WhatsApp.
-2. **O link de convite e a recuperação de senha usam o mesmo mecanismo de token** — uma implementação atende as duas estórias, o que reduz o esforço em vez de aumentá-lo.
+2. **O link de convite e a recuperação de senha usam o mesmo mecanismo de token** — uma implementação atende as duas estórias.
 
----
-
-## Decisão técnica central
-
-A relação entre obra e tema é **muitos-para-muitos**: uma obra de literatura infantil pode atender Português, História e Ensino Religioso ao mesmo tempo. E a lista de temas **não é fixa no código** — a editora cria e ajusta conforme o acervo cresce.
-
-!!! tip "Por que as US de cadastro de temas e escolaridades são `MUST`"
-    Sem a gestão de temas e escolaridades e o vínculo obra–tema, a busca da [US07](../backlog/epico-2-busca.md#us07-busca-de-obras-por-nome-must-3-pts) e o filtro da [US08](../backlog/epico-2-busca.md#us08-filtro-por-tema-e-escolaridade-must-5-pts) não têm o que retornar.

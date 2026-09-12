@@ -82,7 +82,6 @@ nav:
   - Produto:
       - Visão do produto: produto/visao.md
       - Personas: produto/personas.md
-      - Fora do escopo: produto/escopo.md
   - Backlog:
       - backlog/index.md
       - Épico 1 — Acesso e Contas: backlog/epico-1-acesso.md
@@ -90,10 +89,6 @@ nav:
       - Épico 3 — Gestão do Acervo: backlog/epico-3-gestao.md
       - Épico 4 — Navegação e Conteúdo Institucional: backlog/epico-4-navegacao.md
       - Resumo do backlog: backlog/resumo.md
-  - Cliente:
-      - Notas da reunião: cliente/notas.md
-      - Pontos a confirmar: cliente/pontos-a-confirmar.md
-  - Sobre: sobre.md
 
 extra:
   social:
