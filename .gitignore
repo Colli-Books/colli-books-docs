@@ -5,3 +5,6 @@ __pycache__/
 
 # MkDocs
 site/
+
+# Arquivos-fonte do brModelo (binarios; exportamos os PNG em docs/imagens/)
+*.brM3
