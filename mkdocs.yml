@@ -90,6 +90,9 @@ nav:
       - Épico 4 — Navegação e Conteúdo Institucional: backlog/epico-4-navegacao.md
       - Resumo do backlog: backlog/resumo.md
   - Protótipo: prototipo/resumo.md
+  - Técnico:
+      - Modelo físico do banco: tecnico/modelo-fisico.md
+      - Tabelas e atributos: tecnico/tabelas.md
 
 extra:
   social:
