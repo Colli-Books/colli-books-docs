@@ -2,58 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://colli-books-docs.example.com/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/sobre/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/api/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/decisoes/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/desenvolvimento/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/fluxos/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/modelo-fisico/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://colli-books-docs.example.com/backend/tabelas/</loc>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/epico-1-acesso/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/epico-2-busca/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/epico-3-gestao/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/epico-4-navegacao/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/backlog/resumo/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/cliente/notas/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/cliente/pontos-a-confirmar/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/produto/escopo/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/produto/personas/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/produto/visao/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
     <url>
          <loc>https://colli-books-docs.example.com/prototipo/resumo/</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-10-21</lastmod>
     </url>
 </urlset>
