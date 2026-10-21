@@ -8,7 +8,7 @@
 
 ## O problema a resolver
 
-O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo contém o tema que procura.** A editora cadastra o professor a partir de um e-mail, ele recebe um convite, define sua senha, busca obras pelo nome, filtra por tema e escolaridade, e encontra as obras daquela área — com um link direto para compra na loja oficial.
+O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo contém o tema que procura.** A editora cadastra o professor a partir de um e-mail, ele recebe um convite no e-mail, completa o cadastro com nome, escola e a senha que escolher, busca obras pelo nome, filtra por tema e escolaridade, e encontra as obras daquela área — com um link direto para compra na loja oficial.
 
 Os dois únicos perfis são:
 

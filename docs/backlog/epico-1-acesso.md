@@ -10,21 +10,22 @@ Conjunto de histórias que controlam quem entra no sistema e como. O acesso é s
 
 **Critérios de aceitação**
 
-- DADO que estou no painel administrativo, QUANDO cadastro um professor informando o e-mail, ENTÃO a conta é criada com status "Convite pendente" e um link de convite é gerado.
-- ENTÃO o link de convite é exibido para cópia, permitindo o envio por e-mail ou WhatsApp.
+- DADO que estou no painel administrativo, QUANDO cadastro um professor informando o e-mail, ENTÃO a conta é criada com status "Convite pendente" e um link de convite é enviado para o e-mail do professor.
+- ENTÃO o link de convite também é exibido para cópia, permitindo o reenvio por WhatsApp caso o e-mail não chegue.
+- O sistema não gera senha: o professor define a própria senha ao completar o cadastro (US02).
 - QUANDO informo um e-mail já cadastrado, ENTÃO vejo mensagem de erro e nenhuma conta é duplicada.
 - ENQUANTO a senha não for definida, o login com esse e-mail é bloqueado.
 
 ---
 
-## US02 — Primeiro acesso e definição de senha `MUST` · 3 pts
+## US02 — Primeiro acesso e conclusão do cadastro `MUST` · 3 pts
 
-**Como** Paulo (Professor), **posso** abrir o link de convite e definir minha própria senha, **para que** eu acesse a plataforma sem receber uma senha por mensagem.
+**Como** Paulo (Professor), **posso** abrir o link de convite, completar meu cadastro e definir minha própria senha, **para que** eu acesse a plataforma sem receber uma senha por mensagem.
 
 **Critérios de aceitação**
 
-- DADO que abro um link de convite válido, ENTÃO vejo meu e-mail já preenchido como usuário e um formulário para definir a senha.
-- QUANDO defino uma senha com no mínimo 8 caracteres e confirmo, ENTÃO minha conta é ativada, o link deixa de ser válido e sou autenticado.
+- DADO que abro um link de convite válido, ENTÃO vejo meu e-mail já preenchido como usuário e um formulário com nome (obrigatório), escola (opcional) e senha.
+- QUANDO preencho o nome, defino uma senha com no mínimo 8 caracteres e confirmo, ENTÃO meus dados são salvos, minha conta é ativada, o link deixa de ser válido e sou autenticado.
 - QUANDO o link está expirado e a senha ainda não foi definida, ENTÃO vejo a opção de solicitar um novo link de convite, sem precisar acionar a editora.
 - QUANDO o link já foi utilizado (senha já definida), ENTÃO vejo mensagem orientando a usar o "Esqueci minha senha" para redefinir o acesso.
 - A senha é armazenada com hash.
