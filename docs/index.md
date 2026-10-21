@@ -4,7 +4,7 @@ Bem-vindo à documentação do produto **Colli Books** — a plataforma de consu
 
 ## Resumo do produto
 
-O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo contém o tema que procura.** A editora cadastra o professor a partir de um e-mail, ele recebe um convite, define sua senha, busca obras pelo nome, filtra por tema e escolaridade, e encontra as obras daquela área — com um link direto para compra na loja oficial.
+O sistema resolve um problema único: **um professor precisa descobrir quais obras do acervo contém o tema que procura.** A editora cadastra o professor a partir de um e-mail, ele recebe um convite no e-mail, completa o cadastro com nome, escola e a senha que escolher, busca obras pelo nome, filtra por tema e escolaridade, e encontra as obras daquela área — com um link direto para compra na loja oficial.
 
 ### Perfis de usuário
 
@@ -22,6 +22,7 @@ Não há área de cliente final, carrinho, orçamento ou venda dentro do sistema
 - [:material-eye: Visão do produto](produto/visao.md) — decisões de acesso e técnicas centrais.
 - [:material-account-group: Personas](produto/personas.md) — Paulo (Professor) e Diego (Administrador).
 - [:material-format-list-bulleted: Backlog do produto](backlog/index.md) — 18 histórias de usuário organizadas em 4 épicos.
+- [:material-server: Backend](backend/index.md) — arquitetura MVC, fluxos de acesso, API e decisões técnicas.
 
 ---
 

@@ -90,9 +90,14 @@ nav:
       - Épico 4 — Navegação e Conteúdo Institucional: backlog/epico-4-navegacao.md
       - Resumo do backlog: backlog/resumo.md
   - Protótipo: prototipo/resumo.md
-  - Técnico:
-      - Modelo físico do banco: tecnico/modelo-fisico.md
-      - Tabelas e atributos: tecnico/tabelas.md
+  - Backend:
+      - Visão geral: backend/index.md
+      - Fluxos de acesso: backend/fluxos.md
+      - API: backend/api.md
+      - Decisões de arquitetura: backend/decisoes.md
+      - Como rodar e contribuir: backend/desenvolvimento.md
+      - Modelo físico do banco: backend/modelo-fisico.md
+      - Tabelas e atributos: backend/tabelas.md
 
 extra:
   social:
