@@ -4,7 +4,8 @@ O backend é uma **API REST** que o app Flutter consome. Ele guarda as contas, c
 quem pode entrar e, nas próximas fases, servirá o acervo.
 
 Código: [`colli-books-backend`](https://github.com/Colli-Books/colli-books-backend).
-Com a API rodando, a documentação interativa (Swagger) fica em `/docs`.
+Com a API rodando, a documentação interativa (Swagger) fica em `/docs`; o deploy de
+demonstração está em <https://colli-books-backend-ixvf.vercel.app/docs>.
 
 ---
 
@@ -74,7 +75,7 @@ app/
 ├── controllers/     # CONTROLLER: rotas HTTP
 └── security/        # hash de senha, JWT e "quem está logado"
 alembic/versions/    # migrations do banco
-tests/               # unitários e de integração
+tests/               # historias/ (aceitação por história de usuário) e infra/ (health, migrations, seed)
 ```
 
 ---

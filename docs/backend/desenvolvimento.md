@@ -27,16 +27,38 @@ docker compose exec backend python -m app.cli seed-admin --email admin@colli.com
 
 ## Testes
 
+Os testes rodam contra um **PostgreSQL real** e são divididos por propósito:
+
+- `tests/historias/` — critérios de aceitação de cada história de usuário
+  (`test_us01_*.py` … `test_us18_*.py`);
+- `tests/infra/` — infraestrutura: health check, endpoint raiz, sincronismo entre
+  models e migrations e o seed de demonstração.
+
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
 docker compose up -d db
-pytest                                   # testes
+
+pytest                                   # suíte completa (historias + infra)
+pytest tests/historias                   # só as histórias de usuário
+pytest tests/infra                       # só os testes de infraestrutura
+pytest tests/historias/test_us01_*.py   # uma história só
 ruff check . && ruff format --check .    # padrão de código
 ```
 
 Os testes criam um banco próprio (`colli_books_test`), aplicam as migrations e desfazem tudo
-ao final de cada teste.
+ao final de cada teste. Se o PostgreSQL estiver em outro endereço ou porta, defina
+`TEST_DATABASE_URL` (o nome do banco precisa terminar em `_test`):
+
+```bash
+TEST_DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5433/colli_books_test pytest
+```
+
+!!! tip "Cenários repetidos"
+    As variações (e-mail em maiúsculas, senha fraca, convite expirado…) usam
+    `pytest.mark.parametrize` com `id`s descritivos. Critérios comuns a mais de uma
+    história ficam em módulos compartilhados, como `tests/redefinicao_senha.py`
+    (US04 e US06).
 
 ---
 

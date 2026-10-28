@@ -27,6 +27,45 @@ Fora do `/api/v1`: `GET /` (a API está no ar) e `GET /health` (a API alcança o
 
 ---
 
+## Swagger (deploy de demonstração)
+
+A documentação interativa da API publicada está em:
+
+**<https://colli-books-backend-ixvf.vercel.app/docs>**
+
+Ela é gerada pelo próprio código, então reflete exatamente as rotas, os schemas e os
+exemplos da versão em produção. Pelo botão *Try it out* as requisições são executadas de
+fato, contra o banco real do deploy.
+
+### Obtendo o token com o usuário admin
+
+As rotas autenticadas exigem um access token. O administrador já cadastrado no banco do
+deploy é:
+
+| Campo | Valor |
+| --- | --- |
+| E-mail | `admin@colli.com` |
+| Senha | `12345678` |
+| Papel | `admin` |
+
+Para autorizar as chamadas no Swagger:
+
+1. Abra <https://colli-books-backend-ixvf.vercel.app/docs>.
+2. Em `POST /api/v1/auth/login`, clique em **Try it out** e envie as credenciais acima.
+3. Copie o `access_token` da resposta (validade de 15 minutos).
+4. Clique em **Authorize** (cadeado, no topo da página) e cole o token.
+5. As rotas protegidas e de admin passam a funcionar no *Try it out*.
+
+O mesmo token também serve para testar a API fora do Swagger, via
+`Authorization: Bearer <access_token>`.
+
+!!! warning "Ambiente de demonstração"
+    O deploy é compartilhado: os dados cadastrados por *Try it out* (obras, temas,
+    professores) ficam no banco real. Prefira o ambiente
+    [local](desenvolvimento.md#rodar-localmente) para experimentos mais destrutivos.
+
+---
+
 ## Autenticação
 
 Rotas que exigem login recebem o header `Authorization: Bearer <access_token>`.
