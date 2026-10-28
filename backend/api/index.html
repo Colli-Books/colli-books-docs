@@ -828,6 +828,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#swagger-deploy-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger (deploy de demonstração)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger (deploy de demonstração)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtendo-o-token-com-o-usuario-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtendo o token com o usuário admin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#autenticacao" class="md-nav__link">
     <span class="md-ellipsis">
       Autenticação
@@ -990,6 +1014,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#swagger-deploy-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger (deploy de demonstração)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger (deploy de demonstração)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtendo-o-token-com-o-usuario-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtendo o token com o usuário admin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#autenticacao" class="md-nav__link">
     <span class="md-ellipsis">
       Autenticação
@@ -1119,6 +1167,54 @@ Swagger (<code>/docs</code>), que é gerado pelo próprio código e por isso est
 </tbody>
 </table>
 <p>Fora do <code>/api/v1</code>: <code>GET /</code> (a API está no ar) e <code>GET /health</code> (a API alcança o banco).</p>
+<hr />
+<h2 id="swagger-deploy-de-demonstracao">Swagger (deploy de demonstração)<a class="headerlink" href="#swagger-deploy-de-demonstracao" title="Permanent link">&para;</a></h2>
+<p>A documentação interativa da API publicada está em:</p>
+<p><strong><a href="https://colli-books-backend-ixvf.vercel.app/docs">https://colli-books-backend-ixvf.vercel.app/docs</a></strong></p>
+<p>Ela é gerada pelo próprio código, então reflete exatamente as rotas, os schemas e os
+exemplos da versão em produção. Pelo botão <em>Try it out</em> as requisições são executadas de
+fato, contra o banco real do deploy.</p>
+<h3 id="obtendo-o-token-com-o-usuario-admin">Obtendo o token com o usuário admin<a class="headerlink" href="#obtendo-o-token-com-o-usuario-admin" title="Permanent link">&para;</a></h3>
+<p>As rotas autenticadas exigem um access token. O administrador já cadastrado no banco do
+deploy é:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-mail</td>
+<td><code>admin@colli.com</code></td>
+</tr>
+<tr>
+<td>Senha</td>
+<td><code>12345678</code></td>
+</tr>
+<tr>
+<td>Papel</td>
+<td><code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Para autorizar as chamadas no Swagger:</p>
+<ol>
+<li>Abra <a href="https://colli-books-backend-ixvf.vercel.app/docs">https://colli-books-backend-ixvf.vercel.app/docs</a>.</li>
+<li>Em <code>POST /api/v1/auth/login</code>, clique em <strong>Try it out</strong> e envie as credenciais acima.</li>
+<li>Copie o <code>access_token</code> da resposta (validade de 15 minutos).</li>
+<li>Clique em <strong>Authorize</strong> (cadeado, no topo da página) e cole o token.</li>
+<li>As rotas protegidas e de admin passam a funcionar no <em>Try it out</em>.</li>
+</ol>
+<p>O mesmo token também serve para testar a API fora do Swagger, via
+<code>Authorization: Bearer &lt;access_token&gt;</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ambiente de demonstração</p>
+<p>O deploy é compartilhado: os dados cadastrados por <em>Try it out</em> (obras, temas,
+professores) ficam no banco real. Prefira o ambiente
+<a href="../desenvolvimento/#rodar-localmente">local</a> para experimentos mais destrutivos.</p>
+</div>
 <hr />
 <h2 id="autenticacao">Autenticação<a class="headerlink" href="#autenticacao" title="Permanent link">&para;</a></h2>
 <p>Rotas que exigem login recebem o header <code>Authorization: Bearer &lt;access_token&gt;</code>.</p>
